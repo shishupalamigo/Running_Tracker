@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Running Tracker</title>
 </head>
 
 <body>
     <div class="logo">
-        <svg width="383" height="367" viewBox="0 0 383 367" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 383 367" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M288.603 64.462C306.387 64.462 320.81 49.991 320.81 32.207C320.81 14.423 306.388 0 288.603 0C270.77 0 256.348 14.422 256.348 32.207C256.348 49.991 270.77 64.462 288.603 64.462Z"
                 fill="gray" />
@@ -21,7 +21,7 @@
         </svg>
     </div>
     <form>
-        <label for="entry">Number of Kms today</label>
+        <label for="entry">Distance run today in Kilometers</label>
         <br>
         <input type="number" id="entry" step="0.1">
         <br>
@@ -45,25 +45,28 @@
 
     <section class="data">
         <div>
-            <p>Total:</p> 
+            <p>Total:</p>
             <span id="total">0</span>
         </div>
         <div>
-            <p>Average distance:</p> 
+            <p>Average distance:</p>
             <span id="average">0</span>
         </div>
         <div>
-            <p>This weeks high:</p> 
+            <p>This weeks high:</p>
             <span id="high">0</span>
         </div>
     </section>
 
     <section class="progress">
-        <h3>Weekly target: 
+        <h3>Weekly target:
             <span id="progressTotal"></span>
-         / <span id="target"></span> Kilometers
+            / <span id="target"></span> Kilometers
         </h3>
         <div class="progressCircleWrapper">
+            <div id="progressCircle">
+                <div id="progressCenter"></div>
+            </div>
         </div>
     </section>
     <script src="script.js"></script>
